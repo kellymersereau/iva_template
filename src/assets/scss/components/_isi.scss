@@ -1,0 +1,97 @@
+footer {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  width: 100vw;
+  z-index: 100;
+  
+  #isi__full {
+    padding: 0;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+    align-content: flex-start;
+    align-items: flex-start;
+    max-height: 14vh;
+    overflow: hidden;
+    border-top: 1px solid #282828;
+    transition: max-height 0.75s linear;
+    background-color: $white;
+    &.show-isi {
+      max-height: 100vh;
+      transition: max-height 0.75s linear;
+      z-index: 300;
+      overflow: scroll;
+      .isi-content-wrapper {
+        flex: 0 0 100%;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+      }
+    }
+    .isi-content-wrapper {
+      flex: 0 0 100%;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+      .isi-button-wrapper {
+        display: block;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        right: 0;
+        background-color: white;
+        height: auto;
+        text-align: right;
+        .isi-button {
+          min-width: 9rem;
+          width: 9rem;
+          min-height: auto;
+          height: auto;
+          padding: .75vh 1vw 1vh;
+          line-height: 1;
+          margin: 0;
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-color: #CF1346;
+          color: $white;
+          font-family: Arial, sans-serif;
+          text-decoration: none;
+          text-align: center;
+          box-sizing: border-box;
+          font-size: 1.75rem;
+          span {
+            color: $white;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 1.5rem;
+          }
+          img {
+            display: inline;
+            width: 1rem;
+            height: auto;
+            margin-left: 0.75vw;
+            vertical-align: baseline;
+            margin-right: 0;
+            &.hide {
+              display: none;
+            }
+            &.close-img {
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+      .isi-content {
+        max-width: 95%;
+        z-index: 200;
+        background: $white;
+        padding: 1vh 2vw;
+      }
+    }
+  }
+}

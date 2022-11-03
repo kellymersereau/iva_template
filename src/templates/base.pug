@@ -1,0 +1,23 @@
+doctype html
+
+html
+	head
+		block vars
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		title THIS IVA | #{page_title}
+		meta(name="viewport" content="width=1024, initial-scale=1, maximum-scale=1, user-scalable=no")
+		link(href="../shared/global-assets/styles/styles.css" rel="stylesheet" media="all")
+	body(class=page_class)
+		div.wrapper
+			include ../partials/top-nav
+			block content
+			include ../partials/isi
+			include ../partials/bottom-nav
+			include ../partials/modals
+			if extra_modals
+				block extra_modals_code
+		script(src="../shared/global-assets/js/jquery-3.1.1.min.js")
+		if extra_js
+			block extra_js_code
+		script(src="../shared/global-assets/js/main.min.js")

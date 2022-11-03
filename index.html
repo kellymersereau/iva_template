@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>ZIPS DIRECTORY</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      div.header {
+        padding: 2em 2em 1em;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+      div.header > h1 {
+        font-family: sans-serif;
+        font-size: 3.75em;
+        color: #CF1346;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-align: center;
+        line-height: 1;
+        padding-bottom: 20px;
+        border-bottom: 5px solid #091744;
+        margin-bottom: 20px;
+      }
+      div.header > p {
+        font-family: sans-serif;
+        font-size: 1.25em;
+        color: #282828;
+        line-height: 1.2;
+        padding-bottom: 10px;
+        width: 90%;
+        max-width: 1175px;
+        margin: 0 auto;
+      }
+      div.header > p.small {
+        font-size: 0.95em;
+      }
+      @media(max-width: 1350px){
+        div.header > p {
+          width: 100%;
+        }
+      }
+      div.header > p:last-of-type {
+        padding-bottom: 0;
+      }
+      div.header > p > span {
+        font-weight: 600;
+      }
+      div.header > p > a {
+        text-decoration: underline;
+        color: #CF1346;
+        font-family: sans-serif;
+        font-size: 1em;
+        line-height: 1.1;
+        border: none;
+        border-radius: 0;
+        display: inline-block;
+        flex-direction: unset;
+        width: auto;
+        height: auto;
+      }
+      div.flex-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0 1em 2em;
+      }
+
+      div.flex-content {
+        flex: 1 1 23%;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin: 1em;
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 0.25s ease-in-out;
+      }
+      a > p.large {
+        font-size: 1em;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        background-color: #091744;
+        border-bottom: 2px solid #CF1346;
+        flex: 0 0 auto;
+        padding: 0.5em;
+        transition: all 0.25s ease-in-out;
+        letter-spacing: 0.15px;
+      }
+      .inner-content {
+        padding: 1em;
+      }
+      .inner-content > img {
+        margin: 0 auto 1em;
+        display: block;
+      }
+      .inner-content > p {
+        font-size: 12px;
+        color: #000000;
+        padding-bottom: 5px;
+      }
+      .inner-content > p:last-of-type {
+        padding-bottom: 0;
+      }
+      .inner-content > p > span {
+        font-weight: 600;
+      }
+      a:visited {
+        border-color: #565656;
+      }
+      a:hover {
+        box-shadow: 1px 2px 6px 2px #adadad;
+      }
+      a:hover > p.large {
+        background-color: #CF1346;
+        border-bottom: 2px solid #000000;
+      }
+      a:hover > .inner-content > img {
+        border: solid 2px #CF1346;
+      }
+      img {
+        border: solid 2px black;
+        height: 130px;
+        width: 195px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="header">
+      <h1>_NAME_OF_PRESENTATION</h1>
+      <p>
+        <span>Link to excel doc with all slide names & order number: </span><a href="_LINK_TO_DOC_" target="_blank" title="Slide Names and Slide Order excel doc">_LINK_TO_DOC_</a>
+      </p>
+      <p class="small"><span>NOTE:</span> Do not edit this document unless you are 100% positive you are correct.  This is our master document for all slide names, file names and slide order for the IVA.  The slide names and file names should only change when absolutely necessary and be sure to alert Kelly Mersereau if you are going to change any of these things that way we can properly change the names in the code and salesforce/veeva.</p>
+    </div>
+    <div class="flex-wrapper">
+      <div class="flex-content">
+        <a href="build/home_slide/index.html" target="_blank">
+          <p class="large">Home Slide</p>
+          <div class="inner-content">
+            <img src="build/home_slide/thumb.png" alt="">
+            <p><span class="bold">Slide Zip Name:</span> home_slide.zip</p>
+          </div>
+        </a>
+      </div>
+			<div class="flex-content">
+				<a href="build/test_pdf_slide/index.html" target="_blank">
+					<p class="large">Test PDF Slide</p>
+					<div class="inner-content">
+						<img src="build/test_pdf_slide/thumb.png" alt="">
+						<p><span class="bold">Slide Zip Name:</span> test_pdf_slide.zip</p>
+					</div>
+				</a>
+			</div>
+			<div class="flex-content">
+				<!--	EMPTY DIV	-->
+			</div>
+    </div>
+
+
+  </body>
+  </html>

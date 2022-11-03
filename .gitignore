@@ -1,0 +1,10 @@
+node_modules
+.DS_Store
+.tmp
+dist/*
+.idea/
+/build/*
+!/build/zip.sh
+!/build/veeva_multichannel_loader.csv
+.mp4
+package-lock.json

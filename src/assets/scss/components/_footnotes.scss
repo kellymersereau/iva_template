@@ -1,0 +1,82 @@
+.footnote-wrapper {
+  display: block;
+  width: 100%;
+  padding: 0 0 2vh;
+  &.extra-margin-top {
+    margin-top: 2vh !important;
+  }
+  p {
+    font-size: 1.1rem;
+    padding: 0 0 10px;
+    //font-family: $fontRegular;
+    &.dagger,
+    &.ddagger,
+    &.asterisk {
+      position: relative;
+      padding-bottom: 0;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: -0.5rem;
+      }
+    }
+    &.asterisk {
+      &:before {
+        content: "*";
+        font-size: 1rem;
+      }
+    }
+    &.dagger {
+      &:before {
+        content: "†";
+        font-size: 0.75rem;
+      }
+    }
+    &.ddagger {
+      &:before {
+        content: '‡';
+        font-size: 0.75em;
+      }
+    }
+    &.extra-padding {
+      padding: 1.5vh 0 !important;
+    }
+    &.extra-padding-bottom {
+      padding-bottom: 1.5vh;
+    }
+		&.no-padding-bottom {
+			padding-bottom: 0;
+		}
+    &.sm-padding-bottom {
+      padding-bottom: 5px;
+    }
+    sup {
+      top: 0;
+    }
+    span {
+      color:  inherit;
+      line-height: inherit;
+      font-weight: inherit;
+      font-family: inherit;
+      &.italic {
+        font-style: italic;
+      }
+      &.bold {
+        font-weight: bold;
+        //font-family: $fontBold;
+      }
+    }
+  }
+}
+.flex-footnote-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  a {
+    margin: 0;
+    flex: 1 0 auto;
+  }
+}

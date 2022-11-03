@@ -1,0 +1,75 @@
+#overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(#000000, 0.75);
+    z-index: 300;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.05s;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+.close {
+    height: 7.5vh;
+    width: 7vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 400;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.05s;
+    box-sizing: border-box;
+    padding: 1vh 1vw;
+    text-align: center;
+    img {
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+    }
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modal {
+    position: absolute;
+    height: 81vh;
+    width: 96vw;
+    top: 4.75vh;
+    left: 2vw;
+    margin: auto;
+    background: $white;
+    opacity: 0;
+    transition: all 0.05s;
+    z-index: 350;
+    pointer-events: all;
+    visibility: hidden;
+    padding: 7.5vh 4vw;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    &.pi {
+        .content {
+            box-sizing: border-box;
+            height: 66vh;
+            width: 100%;
+            overflow: scroll;
+            img {
+                height: auto;
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
